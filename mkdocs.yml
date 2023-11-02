@@ -1,0 +1,112 @@
+# 下面这部分不要动！！！
+# <!!!!----------!!!!>
+site_name: ES-Wiki
+site_description: ES guideline
+site_author: UESTC404
+repo_name: 'UESTC404/ES-Wiki'
+repo_url: 'https://github.com/UESTC404/ES-Wiki'
+copyright: 'Copyright &copy; 2022 - 2023 ES Wiki Team'
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  static_templates:
+    - 404.html
+  language: 'zh'
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  include_search_page: false
+  search_index_only: true
+  favicon: 'favicon.ico'
+  icon:
+    repo: fontawesome/brands/github
+    logo: 'material/school'
+  features:
+    - content.action.edit
+    - navigation.tabs
+    - navigation.instant
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
+  favicon: https://tuchuang-e682.obs.cn-north-1.myhuaweicloud.com/ES.ico
+  logo: https://tuchuang-e682.obs.cn-north-1.myhuaweicloud.com/ES.jpg
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+# <!!!!----!!!!>
+# 修改文件之后主要修改这部分
+# 下面表示每一个组别
+nav:
+  - 简介: 
+    - 网站简介: index.md
+    - 如何修改本网站: about/howToUpdate.md
+  - 四旋翼飞行器软件设计:
+    - 软件驱动设计: softwareDesign/drive.md
+  - 四旋翼飞行器硬件设计:
+    - 硬件电路设计: hardwareDesign/board.md
+  - 四旋翼飞行器调试: 
+    - 调试注意事项: debugProblems/attention.md
+
+
