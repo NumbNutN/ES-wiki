@@ -3,52 +3,47 @@
 site_name: ES-Wiki
 site_description: ES guideline
 site_author: UESTC404
+repo_name: 'UESTC404/ES-Wiki'
+repo_url: 'https://github.com/UESTC404/ES-Wiki'
+copyright: 'Copyright &copy; 2022 - 2023 ES Wiki Team'
+edit_uri: edit/main/docs/
+
 theme:
   name: material
-  language: zh
-  features:
-    - announce.dismiss
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate
-    - content.code.copy
-    # - content.code.select
-    # - content.tabs.link
-    - content.tooltips
-    # - header.autohide
-    # - navigation.expand
-    - navigation.footer
-    - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
-    - navigation.sections
-    - navigation.tabs
-    # - navigation.tabs.sticky
-    - navigation.top
-    - navigation.tracking
-    - search.highlight
-    - search.share
-    - search.suggest
-    - toc.follow
-    # - toc.integrate
+  static_templates:
+    - 404.html
+  language: 'zh'
   palette:
-    - scheme: default
-      primary: black 
-      accent: indigo
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: red
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Switch to light mode
+  include_search_page: false
+  search_index_only: true
+  favicon: 'favicon.ico'
+  icon:
+    repo: fontawesome/brands/github
+    logo: 'material/school'
+  features:
+    - content.action.edit
+    - navigation.tabs
+    - navigation.instant
   font:
-    text: Ubuntu 
-    code: Ubuntu Mono 
+    text: 'Fira Sans'
+    code: 'Fira Mono'
   favicon: https://tuchuang-e682.obs.cn-north-1.myhuaweicloud.com/ES.ico
   logo: https://tuchuang-e682.obs.cn-north-1.myhuaweicloud.com/ES.jpg
 
@@ -102,14 +97,13 @@ markdown_extensions:
   - pymdownx.tilde
 # <!!!!----!!!!>
 # 修改文件之后主要修改这部分
-
+# 下面表示每一个组别
 nav:
   - 简介: 
     - 网站简介: index.md
     - 如何修改本网站: about/howToUpdate.md
   - 四旋翼飞行器软件设计:
     - 软件驱动设计: softwareDesign/drive.md
-  # 下面代表的是一组页面
   - 四旋翼飞行器硬件设计:
     - 硬件电路设计: hardwareDesign/board.md
   - 四旋翼飞行器调试: 
